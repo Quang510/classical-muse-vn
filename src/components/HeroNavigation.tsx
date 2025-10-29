@@ -9,7 +9,6 @@ import {
   ExclamationTriangleIcon,
   SparklesIcon,
   GlobeAltIcon,
-  ClipboardDocumentCheckIcon,
   BookOpenIcon,
 } from "@heroicons/react/24/outline";
 
@@ -114,17 +113,6 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<GlobeAltIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('impact')}
-            backgroundImage={classicalBg}
-          />
-
-          {/* Quiz */}
-          <BentoCard
-            category="Practice"
-            title="Kiểm tra"
-            description="Trắc nghiệm kiến thức"
-            icon={<ClipboardDocumentCheckIcon className="w-7 h-7" />}
-            className="min-h-[200px]"
-            onClick={() => onNavigate('quiz')}
             backgroundImage={classicalBg}
           />
 
