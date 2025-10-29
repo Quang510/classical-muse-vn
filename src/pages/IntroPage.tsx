@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const IntroPage = () => {
   const navigate = useNavigate();
@@ -124,6 +125,13 @@ const IntroPage = () => {
               </ul>
             </div>
           </div>
+
+          <PageNavigation
+            nextPage={{
+              path: "/characteristics",
+              label: "Đặc điểm"
+            }}
+          />
         </div>
       </div>
     </div>

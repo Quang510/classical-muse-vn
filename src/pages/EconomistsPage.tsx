@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { EconomistCard } from "@/components/EconomistCard";
 import { EconomistDetail, EconomistDetailData } from "@/components/EconomistDetail";
 import { useState } from "react";
+import { PageNavigation } from "@/components/PageNavigation";
 import adamSmithImg from "@/assets/adam-smith.jpg";
 import davidRicardoImg from "@/assets/david-ricardo.jpg";
 import johnStuartMillImg from "@/assets/john-stuart-mill.jpg";
@@ -220,6 +221,17 @@ const EconomistsPage = () => {
               />
             ))}
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/petty",
+              label: "William Petty"
+            }}
+            nextPage={{
+              path: "/references",
+              label: "Tài liệu tham khảo"
+            }}
+          />
         </div>
 
         <EconomistDetail

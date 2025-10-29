@@ -5,6 +5,7 @@ import { BentoCard } from "@/components/BentoCard";
 import { theoriesData } from "@/data/theoriesData";
 import { TheoryDetail } from "@/components/TheoryDetail";
 import { useState } from "react";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const TheoriesPage = () => {
   const navigate = useNavigate();
@@ -93,6 +94,17 @@ const TheoriesPage = () => {
               />
             ))}
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/philosophy",
+              label: "Triết học cơ bản"
+            }}
+            nextPage={{
+              path: "/contributions",
+              label: "Đóng góp lịch sử"
+            }}
+          />
         </div>
       </div>
 

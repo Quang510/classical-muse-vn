@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const ImpactPage = () => {
   const navigate = useNavigate();
@@ -117,6 +118,17 @@ const ImpactPage = () => {
               </Card>
             ))}
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/contributions",
+              label: "Đóng góp lịch sử"
+            }}
+            nextPage={{
+              path: "/petty",
+              label: "William Petty"
+            }}
+          />
         </div>
       </div>
     </div>

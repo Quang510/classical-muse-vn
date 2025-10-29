@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { FeatureTile } from "@/components/FeatureTile";
+import { PageNavigation } from "@/components/PageNavigation";
 import { 
   LightBulbIcon, 
   ScaleIcon, 
@@ -85,6 +86,17 @@ const CharacteristicsPage = () => {
               <FeatureTile key={index} {...char} />
             ))}
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/intro",
+              label: "Giới thiệu chung"
+            }}
+            nextPage={{
+              path: "/philosophy",
+              label: "Triết học cơ bản"
+            }}
+          />
         </div>
       </div>
     </div>

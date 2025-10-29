@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const ContributionsPage = () => {
   const navigate = useNavigate();
@@ -82,6 +83,17 @@ const ContributionsPage = () => {
               </Card>
             ))}
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/theories",
+              label: "Lý thuyết cốt lõi"
+            }}
+            nextPage={{
+              path: "/impact",
+              label: "Ảnh hưởng và Di sản"
+            }}
+          />
         </div>
       </div>
     </div>

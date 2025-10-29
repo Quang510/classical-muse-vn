@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const PhilosophyPage = () => {
   const navigate = useNavigate();
@@ -101,6 +102,17 @@ const PhilosophyPage = () => {
               </CardContent>
             </Card>
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/characteristics",
+              label: "Đặc điểm"
+            }}
+            nextPage={{
+              path: "/theories",
+              label: "Lý thuyết cốt lõi"
+            }}
+          />
         </div>
       </div>
     </div>

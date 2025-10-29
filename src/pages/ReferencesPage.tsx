@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PageNavigation } from "@/components/PageNavigation";
 
 const ReferencesPage = () => {
   const navigate = useNavigate();
@@ -138,6 +139,13 @@ const ReferencesPage = () => {
               </CardContent>
             </Card>
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/economists",
+              label: "Các nhà kinh tế"
+            }}
+          />
         </div>
       </div>
     </div>

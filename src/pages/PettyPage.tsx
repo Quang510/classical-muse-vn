@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 import williamPettyImg from "@/assets/william-petty.jpg";
+import { PageNavigation } from "@/components/PageNavigation";
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -134,6 +135,17 @@ const PettyPage = () => {
               </div>
             </div>
           </div>
+
+          <PageNavigation
+            previousPage={{
+              path: "/impact",
+              label: "Ảnh hưởng và Di sản"
+            }}
+            nextPage={{
+              path: "/economists",
+              label: "Các nhà kinh tế"
+            }}
+          />
         </div>
       </div>
     </div>
