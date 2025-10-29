@@ -26,7 +26,7 @@ export const EconomistCard = ({
   onViewDetail,
 }: EconomistCardProps) => {
   return (
-    <Card className={`hover-lift overflow-hidden border-gold/30 bg-card shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-large)] transition-all duration-500 ${className}`}>
+    <Card className={`hover-lift overflow-hidden border-gold/30 bg-card shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-large)] transition-all duration-500 flex flex-col h-full ${className}`}>
       <div className="aspect-[4/3] overflow-hidden bg-muted relative">
         <img
           src={imageSrc}
@@ -35,14 +35,14 @@ export const EconomistCard = ({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <CardContent className="p-6 space-y-4">
+      <CardContent className="p-6 space-y-4 flex flex-col flex-1">
         <div>
           <h3 className="text-2xl font-serif text-primary mb-1">{name}</h3>
           <p className="text-sm text-muted-foreground">{years}</p>
           <p className="text-bronze font-medium mt-2 italic">{title}</p>
         </div>
 
-        <div className="space-y-3 text-sm">
+        <div className="space-y-3 text-sm flex-1">
           <div>
             <strong className="text-primary">Tác phẩm:</strong>
             <p className="text-foreground/90 leading-relaxed">{work}</p>
@@ -63,7 +63,7 @@ export const EconomistCard = ({
           <Button
             onClick={onViewDetail}
             variant="outline"
-            className="w-full mt-2 border-gold/50 hover:bg-gradient-to-r hover:from-bronze hover:to-gold hover:text-white hover:border-transparent transition-all duration-300 group"
+            className="w-full mt-auto border-gold/50 hover:bg-gradient-to-r hover:from-bronze hover:to-gold hover:text-white hover:border-transparent transition-all duration-300 group"
           >
             Xem chi tiết
             <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
