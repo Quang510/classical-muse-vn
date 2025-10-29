@@ -78,18 +78,18 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             title="Lý thuyết"
             description="Bàn tay vô hình, giá trị lao động..."
             icon={<LightBulbIcon className="w-7 h-7" />}
-            className="md:col-span-2 lg:col-span-1 min-h-[200px]"
+            className="min-h-[200px]"
             onClick={() => onNavigate('theories')}
             backgroundImage={classicalBg}
           />
 
-          {/* Contributions & Limitations - Large horizontal */}
+          {/* Contributions & Limitations */}
           <BentoCard
             category="Analysis"
             title="Đóng góp & Hạn chế"
             description="Đánh giá toàn diện trường phái"
             icon={<TrophyIcon className="w-7 h-7" />}
-            className="md:col-span-3 lg:col-span-2 min-h-[200px]"
+            className="min-h-[200px]"
             onClick={() => onNavigate('contributions')}
             backgroundImage={classicalBg}
           />
