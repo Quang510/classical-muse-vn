@@ -5,13 +5,6 @@ import { useNavigate } from "react-router-dom";
 const IntroPage = () => {
   const navigate = useNavigate();
 
-  const scrollToContent = () => {
-    const contentSection = document.getElementById('content-section');
-    if (contentSection) {
-      contentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="container mx-auto max-w-5xl">
@@ -28,19 +21,12 @@ const IntroPage = () => {
         {/* Content */}
         <div className="space-y-8">
           <div className="text-center space-y-6 mb-16">
-            <span className="text-6xl">🏛️</span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold bg-gradient-to-r from-primary via-bronze to-gold bg-clip-text text-transparent">
               Giới thiệu chung
             </h1>
             <p className="text-xl text-muted-foreground">
               Trường phái Kinh tế học Cổ điển
             </p>
-            <Button
-              onClick={scrollToContent}
-              className="mt-6 bg-gradient-to-r from-primary via-bronze to-gold hover:opacity-90 text-white px-8 py-6 text-lg rounded-full shadow-[var(--shadow-medium)] transition-all hover:scale-105"
-            >
-              Start ↓
-            </Button>
           </div>
 
           <div id="content-section" className="prose prose-lg max-w-none scroll-mt-20">
@@ -74,8 +60,8 @@ const IntroPage = () => {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-bronze/10 to-gold/10 rounded-2xl p-8 border-2 border-bronze/30 shadow-[var(--shadow-medium)]">
-                <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
-                  🎯 Mục tiêu
+                <h3 className="text-xl font-serif text-primary mb-4">
+                  Mục tiêu
                 </h3>
                 <p className="text-foreground/85 leading-relaxed">
                   Tìm ra các <strong>"quy luật tự nhiên"</strong> chi phối nền kinh tế và xã hội, 
@@ -84,8 +70,8 @@ const IntroPage = () => {
               </div>
 
               <div className="bg-gradient-to-br from-bronze/10 to-gold/10 rounded-2xl p-8 border-2 border-bronze/30 shadow-[var(--shadow-medium)]">
-                <h3 className="text-xl font-serif text-primary mb-4 flex items-center gap-2">
-                  💡 Tư tưởng cốt lõi
+                <h3 className="text-xl font-serif text-primary mb-4">
+                  Tư tưởng cốt lõi
                 </h3>
                 <p className="text-foreground/85 leading-relaxed">
                   Tự do kinh tế, cá nhân là trung tâm, thị trường tự điều tiết, 
