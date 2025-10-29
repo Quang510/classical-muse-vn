@@ -3,6 +3,7 @@ import { Section } from "@/components/Section";
 import { EconomistCard } from "@/components/EconomistCard";
 import { FeatureTile } from "@/components/FeatureTile";
 import { Quiz } from "@/components/Quiz";
+import { useGsapFadeIn, useGsapStagger } from "@/hooks/useGsapAnimation";
 import { 
   TrendingUp, 
   Scale, 
@@ -14,18 +15,30 @@ import {
   Lightbulb,
   Award
 } from "lucide-react";
+import { 
+  ChartBarIcon, 
+  CurrencyDollarIcon, 
+  ScaleIcon,
+  UserGroupIcon,
+  LightBulbIcon,
+  AcademicCapIcon
+} from "@heroicons/react/24/outline";
 import adamSmithImg from "@/assets/adam-smith.jpg";
 import davidRicardoImg from "@/assets/david-ricardo.jpg";
 import johnMillImg from "@/assets/john-stuart-mill.jpg";
 
 const Index = () => {
+  const heroRef = useGsapFadeIn();
+  const cardsRef = useGsapStagger('.economist-card');
+  const tilesRef = useGsapStagger('.feature-tile');
+
   return (
     <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
       <Section id="intro" emoji="🏛️" title="Giới thiệu chung">
-        <div className="max-w-4xl mx-auto space-y-6 text-center">
+        <div ref={heroRef} className="max-w-4xl mx-auto space-y-6 text-center">
           <p className="text-lg md:text-xl leading-relaxed text-foreground/90">
             Trường phái Kinh tế học Cổ điển ra đời trong bối cảnh cách mạng công nghiệp ở Anh 
             thế kỷ XVIII–XIX, đánh dấu sự chuyển mình từ xã hội phong kiến sang chủ nghĩa tư bản 
@@ -53,9 +66,114 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* William Petty Section - NEW */}
+      <Section id="petty" emoji="🧮" title="William Petty – Người mở đường" className="bg-accent/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-card/80 rounded-2xl p-8 border-2 border-accent/30 shadow-xl">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div className="md:col-span-1 flex flex-col items-center">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-accent/40 mb-4">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/William_Petty.jpg/220px-William_Petty.jpg"
+                    alt="William Petty"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-serif text-primary mb-2">William Petty</h3>
+                <p className="text-muted-foreground">1623 – 1687</p>
+                <p className="text-accent font-medium italic mt-2">"Cha đẻ kinh tế chính trị học"</p>
+              </div>
+              
+              <div className="md:col-span-2 space-y-6">
+                <div>
+                  <h4 className="text-xl font-serif text-primary mb-3 flex items-center gap-2">
+                    <AcademicCapIcon className="w-6 h-6 text-accent" />
+                    Vai trò lịch sử
+                  </h4>
+                  <p className="text-foreground/90 leading-relaxed">
+                    William Petty được xem là <strong className="text-accent">người sáng lập kinh tế chính trị học cổ điển</strong>, 
+                    đi trước Adam Smith gần một thế kỷ. Ông là người đầu tiên áp dụng phương pháp khoa học định lượng vào 
+                    nghiên cứu kinh tế, đặt nền móng cho lý thuyết giá trị lao động và phân tích thống kê kinh tế.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-serif text-primary mb-3 flex items-center gap-2">
+                    <BookOpen className="w-6 h-6 text-accent" />
+                    Tác phẩm chính
+                  </h4>
+                  <ul className="space-y-2 text-foreground/90">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">◆</span>
+                      <span><em>A Treatise of Taxes and Contributions</em> (1662) - Phân tích thuế và đất đai</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">◆</span>
+                      <span><em>Political Arithmetic</em> (1676) - Phương pháp thống kê kinh tế</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">◆</span>
+                      <span><em>Quantulumcumque concerning Money</em> (1682) - Lý thuyết tiền tệ</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 pt-6 border-t border-accent/20">
+              <div className="bg-primary/5 rounded-lg p-6">
+                <h4 className="text-lg font-serif text-primary mb-4 flex items-center gap-2">
+                  <LightBulbIcon className="w-5 h-5 text-accent" />
+                  Đóng góp nổi bật
+                </h4>
+                <ul className="space-y-3 text-sm text-foreground/90">
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span><strong>Lý thuyết giá trị lao động:</strong> Đặt nền móng cho quan niệm lao động là nguồn gốc của giá trị</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span><strong>Political Arithmetic:</strong> Phát triển phương pháp định lượng và thống kê trong kinh tế</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span><strong>Phân tích địa tô:</strong> Phân biệt giữa rent (địa tô) và giá trị đất đai</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-accent font-bold">•</span>
+                    <span><strong>Full employment:</strong> Đưa ra khái niệm việc làm đầy đủ trong nền kinh tế</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-secondary/30 rounded-lg p-6">
+                <h4 className="text-lg font-serif text-primary mb-4 flex items-center gap-2">
+                  <ChartBarIcon className="w-5 h-5 text-accent" />
+                  Ảnh hưởng
+                </h4>
+                <div className="space-y-3 text-sm">
+                  <p className="text-foreground/90">
+                    <strong className="text-accent">Karl Marx</strong> thừa nhận Petty là <em>"một trong những nhà điều tra 
+                    kinh tế sáng tạo nhất"</em> và người đặt nền móng cho học thuyết giá trị thặng dư.
+                  </p>
+                  <p className="text-foreground/90">
+                    <strong className="text-accent">Adam Smith</strong> và <strong className="text-accent">David Ricardo</strong> 
+                    {" "}kế thừa và phát triển phương pháp cũng như lý thuyết giá trị lao động của Petty.
+                  </p>
+                  <p className="text-foreground/90">
+                    Công trình của Petty đánh dấu sự chuyển đổi từ <strong>trọng thương chủ nghĩa</strong> sang 
+                    <strong> kinh tế chính trị học khoa học</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Economists Section */}
       <Section id="economists" emoji="🧑‍🏫" title="Các nhà kinh tế tiêu biểu" className="bg-secondary/30">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <EconomistCard
             name="Adam Smith"
             years="1723–1790"
@@ -64,6 +182,7 @@ const Index = () => {
             ideas="Bàn tay vô hình, tự do kinh tế, giá trị do lao động tạo ra"
             influence="Chủ nghĩa duy lý, tự nhiên luận, đạo đức học Anh"
             imageSrc={adamSmithImg}
+            className="economist-card"
           />
           <EconomistCard
             name="David Ricardo"
@@ -73,6 +192,7 @@ const Index = () => {
             ideas="Giá trị lao động, lợi thế so sánh, phân phối lợi nhuận – địa tô – tiền công"
             influence="Phát triển học thuyết giá trị lao động của Adam Smith"
             imageSrc={davidRicardoImg}
+            className="economist-card"
           />
           <EconomistCard
             name="John Stuart Mill"
@@ -82,42 +202,49 @@ const Index = () => {
             ideas="Kết hợp tự do cá nhân với cải cách xã hội, nhấn mạnh đạo đức trong kinh tế học"
             influence="Chủ nghĩa tự do cổ điển, chủ nghĩa công lợi"
             imageSrc={johnMillImg}
+            className="economist-card"
           />
         </div>
       </Section>
 
       {/* Characteristics Section */}
       <Section id="characteristics" emoji="🧩" title="Đặc điểm cơ bản">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={tilesRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <FeatureTile
             icon={TrendingUp}
             title="Lao động là thước đo giá trị"
             description="Giá trị hàng hóa được xác định bởi lượng lao động xã hội cần thiết để sản xuất ra nó"
+            className="feature-tile"
           />
           <FeatureTile
             icon={Scale}
             title="Cơ chế thị trường tự điều tiết"
             description="Thị trường tự do với cung cầu cân bằng, không cần sự can thiệp của nhà nước"
+            className="feature-tile"
           />
           <FeatureTile
             icon={Users}
             title="Cạnh tranh thúc đẩy hiệu quả"
             description="Cạnh tranh tự do giữa các cá nhân tạo ra hiệu quả xã hội cao nhất"
+            className="feature-tile"
           />
           <FeatureTile
             icon={Target}
             title="Quy luật kinh tế khách quan"
             description="Các quy luật kinh tế có tính tự nhiên, phổ biến giống như quy luật vật lý"
+            className="feature-tile"
           />
           <FeatureTile
             icon={Workflow}
             title="Chu trình P-D-T-T"
             description="Quá trình sản xuất – phân phối – trao đổi – tiêu dùng diễn ra liên tục"
+            className="feature-tile"
           />
           <FeatureTile
             icon={Lightbulb}
             title="Lý trí và tự nhiên"
             description="Niềm tin vào khả năng của lý trí con người và trật tự tự nhiên"
+            className="feature-tile"
           />
         </div>
       </Section>

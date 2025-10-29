@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 
 const sections = [
   { id: "intro", label: "Giới thiệu", emoji: "🏛️" },
+  { id: "petty", label: "William Petty", emoji: "🧮" },
   { id: "economists", label: "Nhà kinh tế", emoji: "🧑‍🏫" },
   { id: "characteristics", label: "Đặc điểm", emoji: "🧩" },
   { id: "contributions", label: "Đóng góp", emoji: "🧪" },

@@ -8,6 +8,7 @@ interface EconomistCardProps {
   ideas: string;
   influence: string;
   imageSrc: string;
+  className?: string;
 }
 
 export const EconomistCard = ({
@@ -18,9 +19,10 @@ export const EconomistCard = ({
   ideas,
   influence,
   imageSrc,
+  className = "",
 }: EconomistCardProps) => {
   return (
-    <Card className="hover-lift overflow-hidden border-accent/20">
+    <Card className={`hover-lift overflow-hidden border-accent/20 ${className}`}>
       <div className="aspect-[4/3] overflow-hidden bg-muted">
         <img
           src={imageSrc}
