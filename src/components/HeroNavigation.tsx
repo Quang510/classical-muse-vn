@@ -94,6 +94,17 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             backgroundImage={classicalBg}
           />
 
+          {/* References */}
+          <BentoCard
+            category="Resources"
+            title="Tài liệu"
+            description="Nguồn tham khảo và trích dẫn"
+            icon={<BookOpenIcon className="w-7 h-7" />}
+            className="min-h-[200px]"
+            onClick={() => onNavigate('references')}
+            backgroundImage={classicalBg}
+          />
+
           {/* Philosophy */}
           <BentoCard
             category="Philosophy"
@@ -113,17 +124,6 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<GlobeAltIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('impact')}
-            backgroundImage={classicalBg}
-          />
-
-          {/* References */}
-          <BentoCard
-            category="Resources"
-            title="Tài liệu"
-            description="Nguồn tham khảo và trích dẫn"
-            icon={<BookOpenIcon className="w-7 h-7" />}
-            className="min-h-[200px]"
-            onClick={() => onNavigate('references')}
             backgroundImage={classicalBg}
           />
         </div>
