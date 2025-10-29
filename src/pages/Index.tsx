@@ -4,7 +4,10 @@ import { EconomistCard } from "@/components/EconomistCard";
 import { FeatureTile } from "@/components/FeatureTile";
 import { Quiz } from "@/components/Quiz";
 import { EconomistDetail, EconomistDetailData } from "@/components/EconomistDetail";
+import { BentoCard } from "@/components/BentoCard";
+import { TheoryDetail, TheoryDetailData } from "@/components/TheoryDetail";
 import { economistsData } from "@/data/economistsData";
+import { theoriesData } from "@/data/theoriesData";
 import { useGsapFadeIn, useGsapStagger } from "@/hooks/useGsapAnimation";
 import { useState } from "react";
 import { 
@@ -20,6 +23,11 @@ import {
   AcademicCapIcon,
   CurrencyDollarIcon,
   BeakerIcon,
+  SparklesIcon,
+  BanknotesIcon,
+  GlobeAltIcon,
+  CubeIcon,
+  BuildingLibraryIcon,
 } from "@heroicons/react/24/outline";
 import adamSmithImg from "@/assets/adam-smith.jpg";
 import davidRicardoImg from "@/assets/david-ricardo.jpg";
@@ -33,9 +41,17 @@ const Index = () => {
   const [selectedEconomist, setSelectedEconomist] = useState<EconomistDetailData | null>(null);
   const [detailOpen, setDetailOpen] = useState(false);
 
+  const [selectedTheory, setSelectedTheory] = useState<TheoryDetailData | null>(null);
+  const [theoryDetailOpen, setTheoryDetailOpen] = useState(false);
+
   const handleViewDetail = (economistKey: string) => {
     setSelectedEconomist(economistsData[economistKey]);
     setDetailOpen(true);
+  };
+
+  const handleViewTheory = (theoryKey: string) => {
+    setSelectedTheory(theoriesData[theoryKey]);
+    setTheoryDetailOpen(true);
   };
 
   return (
@@ -46,6 +62,12 @@ const Index = () => {
         open={detailOpen} 
         onOpenChange={setDetailOpen} 
         data={selectedEconomist} 
+      />
+
+      <TheoryDetail
+        open={theoryDetailOpen}
+        onOpenChange={setTheoryDetailOpen}
+        data={selectedTheory}
       />
 
       {/* Hero Section */}
@@ -260,6 +282,68 @@ const Index = () => {
             title="Lý trí và tự nhiên"
             description="Niềm tin vào khả năng của lý trí con người và trật tự tự nhiên"
             className="feature-tile"
+          />
+        </div>
+      </Section>
+
+      {/* Theories Bento Grid Section - NEW */}
+      <Section id="theories" emoji="💡" title="Các lý thuyết cốt lõi" className="bg-gradient-to-b from-secondary/20 to-background">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {/* Large card - Invisible Hand */}
+          <BentoCard
+            category="Cơ chế thị trường"
+            title="Bàn tay vô hình"
+            description="Thị trường tự điều chỉnh qua lợi ích cá nhân"
+            icon={<SparklesIcon className="w-8 h-8" />}
+            className="md:col-span-2 lg:row-span-2 min-h-[280px]"
+            onClick={() => handleViewTheory('invisible-hand')}
+          />
+          
+          {/* Medium cards */}
+          <BentoCard
+            category="Giá trị"
+            title="Lý thuyết giá trị lao động"
+            description="Giá trị hàng hóa được xác định bởi lao động"
+            icon={<CurrencyDollarIcon className="w-7 h-7" />}
+            className="min-h-[200px]"
+            onClick={() => handleViewTheory('labor-theory')}
+          />
+          
+          <BentoCard
+            category="Thương mại quốc tế"
+            title="Lợi thế so sánh"
+            description="Chuyên môn hóa dựa trên chi phí cơ hội"
+            icon={<GlobeAltIcon className="w-7 h-7" />}
+            className="min-h-[200px]"
+            onClick={() => handleViewTheory('comparative-advantage')}
+          />
+          
+          {/* Large horizontal card */}
+          <BentoCard
+            category="Hiệu quả sản xuất"
+            title="Phân công lao động"
+            description="Chuyên môn hóa tăng năng suất"
+            icon={<CubeIcon className="w-7 h-7" />}
+            className="md:col-span-2 min-h-[200px]"
+            onClick={() => handleViewTheory('division-labor')}
+          />
+          
+          <BentoCard
+            category="Phân phối thu nhập"
+            title="Lý thuyết địa tô"
+            description="Thu nhập từ đất đai và tài nguyên"
+            icon={<BanknotesIcon className="w-7 h-7" />}
+            className="min-h-[200px]"
+            onClick={() => handleViewTheory('rent-theory')}
+          />
+          
+          <BentoCard
+            category="Chính sách kinh tế"
+            title="Laissez-faire"
+            description="Tự do kinh tế không can thiệp"
+            icon={<BuildingLibraryIcon className="w-7 h-7" />}
+            className="md:col-span-2 lg:col-span-1 min-h-[200px]"
+            onClick={() => handleViewTheory('laissez-faire')}
           />
         </div>
       </Section>

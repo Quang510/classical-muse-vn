@@ -7,6 +7,7 @@ const sections = [
   { id: "petty", label: "William Petty", emoji: "🧮" },
   { id: "economists", label: "Nhà kinh tế", emoji: "🧑‍🏫" },
   { id: "characteristics", label: "Đặc điểm", emoji: "🧩" },
+  { id: "theories", label: "Lý thuyết", emoji: "💡" },
   { id: "contributions", label: "Đóng góp", emoji: "🧪" },
   { id: "limitations", label: "Hạn chế", emoji: "🧱" },
   { id: "philosophy", label: "Ảnh hưởng triết học", emoji: "🔗" },
