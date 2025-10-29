@@ -27,17 +27,6 @@ const Index = () => {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-bronze/10 rounded-full blur-3xl" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-          {/* Badge */}
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <Badge variant="outline" className="px-4 py-2 text-sm border-gold/30 bg-gold/5">
-              Classical Economics Philosophy
-            </Badge>
-            <span className="text-muted-foreground">•</span>
-            <Badge variant="outline" className="px-4 py-2 text-sm border-bronze/30 bg-bronze/5">
-              18th-19th Century
-            </Badge>
-          </div>
-
           {/* Main Title */}
           <h1 className="text-5xl md:text-7xl font-serif font-bold bg-gradient-to-r from-primary via-bronze to-gold bg-clip-text text-transparent leading-tight">
             Kinh tế học Cổ điển

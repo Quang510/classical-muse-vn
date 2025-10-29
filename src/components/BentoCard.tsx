@@ -8,6 +8,7 @@ interface BentoCardProps {
   icon?: ReactNode;
   className?: string;
   onClick?: () => void;
+  backgroundImage?: string;
 }
 
 export const BentoCard = ({
@@ -17,12 +18,25 @@ export const BentoCard = ({
   icon,
   className = "",
   onClick,
+  backgroundImage,
 }: BentoCardProps) => {
   return (
     <Card
       onClick={onClick}
       className={`group relative overflow-hidden border-2 border-gold/20 bg-gradient-to-br from-primary/5 to-bronze/5 backdrop-blur-sm hover:border-gold/60 transition-all duration-500 cursor-pointer hover:scale-[1.02] hover:shadow-[var(--shadow-large)] ${className}`}
     >
+      {/* Background Image */}
+      {backgroundImage && (
+        <div 
+          className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      )}
+      
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-bronze/0 to-gold/0 group-hover:from-bronze/10 group-hover:to-gold/20 transition-all duration-500" />
       

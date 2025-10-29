@@ -1,4 +1,5 @@
 import { BentoCard } from "./BentoCard";
+import classicalBg from "@/assets/classical-economics-bg.jpg";
 import {
   AcademicCapIcon,
   UserGroupIcon,
@@ -26,24 +27,6 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
       </div>
 
       <div className="container mx-auto max-w-7xl">
-        {/* Title */}
-        <div className="text-center mb-12 space-y-4">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="text-6xl md:text-7xl animate-bounce">🏛️</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold bg-gradient-to-r from-primary via-bronze to-gold bg-clip-text text-transparent mb-4">
-            Kinh tế học Cổ điển
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            Khám phá nền tảng triết học và lý thuyết kinh tế từ thời kỳ cách mạng công nghiệp
-          </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-            <span>Classical Economics Philosophy</span>
-            <span>•</span>
-            <span>18th-19th Century</span>
-          </div>
-        </div>
-
         {/* Bento Grid Navigation */}
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {/* Large card - Intro */}
@@ -54,6 +37,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<AcademicCapIcon className="w-8 h-8" />}
             className="md:col-span-2 lg:col-span-2 lg:row-span-2 min-h-[280px]"
             onClick={() => onNavigate('intro')}
+            backgroundImage={classicalBg}
           />
 
           {/* William Petty */}
@@ -64,6 +48,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<SparklesIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('petty')}
+            backgroundImage={classicalBg}
           />
 
           {/* Economists */}
@@ -74,6 +59,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<UserGroupIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('economists')}
+            backgroundImage={classicalBg}
           />
 
           {/* Characteristics */}
@@ -84,6 +70,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<PuzzlePieceIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('characteristics')}
+            backgroundImage={classicalBg}
           />
 
           {/* Theories */}
@@ -94,6 +81,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<LightBulbIcon className="w-7 h-7" />}
             className="md:col-span-2 lg:col-span-1 min-h-[200px]"
             onClick={() => onNavigate('theories')}
+            backgroundImage={classicalBg}
           />
 
           {/* Contributions & Limitations - Large horizontal */}
@@ -104,6 +92,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<TrophyIcon className="w-7 h-7" />}
             className="md:col-span-3 lg:col-span-2 min-h-[200px]"
             onClick={() => onNavigate('contributions')}
+            backgroundImage={classicalBg}
           />
 
           {/* Philosophy */}
@@ -114,6 +103,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<ExclamationTriangleIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('philosophy')}
+            backgroundImage={classicalBg}
           />
 
           {/* Impact */}
@@ -124,6 +114,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<GlobeAltIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('impact')}
+            backgroundImage={classicalBg}
           />
 
           {/* Quiz */}
@@ -134,6 +125,7 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<ClipboardDocumentCheckIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('quiz')}
+            backgroundImage={classicalBg}
           />
 
           {/* References */}
@@ -144,23 +136,8 @@ export const HeroNavigation = ({ onNavigate }: HeroNavigationProps) => {
             icon={<BookOpenIcon className="w-7 h-7" />}
             className="min-h-[200px]"
             onClick={() => onNavigate('references')}
+            backgroundImage={classicalBg}
           />
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="text-center mt-12 animate-bounce">
-          <p className="text-sm text-muted-foreground mb-2">Cuộn xuống để khám phá</p>
-          <svg
-            className="w-6 h-6 mx-auto text-bronze"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-          </svg>
         </div>
       </div>
     </section>
