@@ -62,7 +62,7 @@ const CharacteristicsPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-serif text-primary mb-4">
-              ⭐ Đặc điểm chính
+              Đặc điểm chính
             </h1>
             <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
             <p className="text-lg text-foreground/80 max-w-3xl mx-auto">

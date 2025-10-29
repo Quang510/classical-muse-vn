@@ -69,7 +69,7 @@ const ReferencesPage = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-serif text-primary mb-4">
-              📚 Tài liệu tham khảo
+              Tài liệu tham khảo
             </h1>
             <div className="w-24 h-1 bg-accent mx-auto rounded-full mb-6"></div>
           </div>
