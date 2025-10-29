@@ -440,36 +440,36 @@ const Index = () => {
       </Section>
 
       {/* References Section */}
-      <Section id="references" emoji="📚" title="Tài liệu tham khảo" className="bg-secondary/30">
+      <Section id="references" emoji="📚" title="Tài liệu tham khảo" className="bg-secondary/40">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-card/80 rounded-xl p-8 border border-accent/20">
+          <div className="bg-card/90 rounded-xl p-8 border-2 border-bronze/20 shadow-[var(--shadow-paper)]">
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <BookOpenIcon className="w-5 h-5 text-bronze mt-1 flex-shrink-0" />
                 <span className="text-foreground/90">
                   Adam Smith (1776). <em>The Wealth of Nations</em>.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <BookOpenIcon className="w-5 h-5 text-bronze mt-1 flex-shrink-0" />
                 <span className="text-foreground/90">
                   David Ricardo (1817). <em>Principles of Political Economy and Taxation</em>.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <BookOpenIcon className="w-5 h-5 text-bronze mt-1 flex-shrink-0" />
                 <span className="text-foreground/90">
                   John Stuart Mill (1848). <em>Principles of Political Economy</em>.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <BookOpenIcon className="w-5 h-5 text-bronze mt-1 flex-shrink-0" />
                 <span className="text-foreground/90">
                   Karl Marx (1867). <em>Das Kapital</em>.
                 </span>
               </li>
               <li className="flex items-start gap-3">
-                <BookOpen className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
+                <BookOpenIcon className="w-5 h-5 text-bronze mt-1 flex-shrink-0" />
                 <span className="text-foreground/90">
                   Bài giảng Triết học Mác – Lênin, FPT University.
                 </span>
