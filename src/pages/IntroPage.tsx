@@ -39,7 +39,7 @@ const IntroPage = () => {
             </p>
           </div>
 
-          <div id="content-section" className="prose prose-lg max-w-none scroll-mt-20">
+          <div id="content-section" className="prose prose-lg max-w-none scroll-mt-20 space-y-12">
             <div className="bg-card/90 rounded-2xl p-8 shadow-[var(--shadow-large)] border-2 border-gold/20 space-y-6">
               <h2 className="text-2xl font-serif text-primary">Bối cảnh lịch sử</h2>
               <p className="text-foreground/90 leading-relaxed">
