@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
+import williamPettyImg from "@/assets/william-petty.jpg";
 import {
   AcademicCapIcon,
   BookOpenIcon,
@@ -29,7 +30,7 @@ const PettyPage = () => {
               <div className="md:col-span-1 flex flex-col items-center">
                 <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-bronze/40 mb-4 shadow-[var(--shadow-medium)]">
                   <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/William_Petty.jpg/220px-William_Petty.jpg"
+                    src={williamPettyImg}
                     alt="William Petty"
                     className="w-full h-full object-cover"
                   />
