@@ -1,8 +1,7 @@
-import { LucideIcon } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 interface FeatureTileProps {
-  icon: LucideIcon;
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   className?: string;
@@ -10,13 +9,13 @@ interface FeatureTileProps {
 
 export const FeatureTile = ({ icon: Icon, title, description, className = "" }: FeatureTileProps) => {
   return (
-    <Card className={`hover-lift border-accent/20 bg-card/80 ${className}`}>
+    <Card className={`hover-lift border-bronze/30 bg-card/90 shadow-[var(--shadow-paper)] hover:shadow-[var(--shadow-elevated)] transition-all duration-300 ${className}`}>
       <CardContent className="p-6 space-y-3 text-center">
-        <div className="w-12 h-12 mx-auto rounded-full bg-accent/10 flex items-center justify-center">
-          <Icon className="w-6 h-6 text-accent" />
+        <div className="w-14 h-14 mx-auto rounded-full bg-bronze/10 flex items-center justify-center border-2 border-bronze/20">
+          <Icon className="w-7 h-7 text-bronze" />
         </div>
         <h4 className="font-serif text-lg text-primary">{title}</h4>
-        <p className="text-sm text-foreground/80 leading-relaxed">{description}</p>
+        <p className="text-sm text-foreground/85 leading-relaxed">{description}</p>
       </CardContent>
     </Card>
   );

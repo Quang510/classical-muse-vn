@@ -8,40 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 35 20% 96%;
-    --foreground: 30 25% 15%;
+    /* Ancient paper/parchment theme with earthy tones */
+    --background: 40 35% 94%;
+    --foreground: 25 20% 20%;
 
-    --card: 35 30% 98%;
-    --card-foreground: 30 25% 15%;
+    --card: 38 40% 96%;
+    --card-foreground: 25 20% 20%;
 
-    --popover: 35 30% 98%;
-    --popover-foreground: 30 25% 15%;
+    --popover: 38 40% 96%;
+    --popover-foreground: 25 20% 20%;
 
-    --primary: 30 25% 15%;
-    --primary-foreground: 35 20% 96%;
+    --primary: 25 35% 25%;
+    --primary-foreground: 40 35% 94%;
 
-    --secondary: 35 20% 90%;
-    --secondary-foreground: 30 25% 15%;
+    --secondary: 38 25% 85%;
+    --secondary-foreground: 25 20% 20%;
 
-    --muted: 35 15% 92%;
+    --muted: 40 20% 88%;
     --muted-foreground: 30 15% 45%;
 
-    --accent: 25 30% 55%;
-    --accent-foreground: 35 20% 96%;
+    --accent: 30 45% 50%;
+    --accent-foreground: 40 35% 94%;
 
-    --teal: 155 25% 50%;
-    --teal-foreground: 35 20% 96%;
+    --bronze: 25 40% 45%;
+    --bronze-foreground: 40 35% 94%;
 
-    --destructive: 0 70% 60%;
-    --destructive-foreground: 35 20% 96%;
+    --antiqued: 35 30% 65%;
+    --antiqued-foreground: 25 20% 20%;
 
-    --border: 35 15% 85%;
-    --input: 35 15% 85%;
-    --ring: 25 30% 55%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 40 35% 94%;
 
-    --radius: 0.75rem;
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 30 45% 50%;
+
+    --radius: 0.5rem;
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Ancient book texture */
+    --shadow-paper: 0 2px 8px rgba(139, 115, 85, 0.15);
+    --shadow-elevated: 0 8px 24px rgba(139, 115, 85, 0.25);
   }
 }
 
