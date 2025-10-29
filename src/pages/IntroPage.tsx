@@ -68,7 +68,7 @@ const IntroPage = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-10">
               <div className="bg-gradient-to-br from-bronze/10 to-gold/10 rounded-2xl p-8 border-2 border-bronze/30 shadow-[var(--shadow-medium)]">
                 <h3 className="text-xl font-serif text-primary mb-4">
                   Mục tiêu
