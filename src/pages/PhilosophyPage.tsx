@@ -6,12 +6,22 @@ import { Card, CardContent } from "@/components/ui/card";
 const PhilosophyPage = () => {
   const navigate = useNavigate();
 
+  const handleBackToHome = () => {
+    navigate("/");
+    setTimeout(() => {
+      const navigationSection = document.getElementById('navigation-section');
+      if (navigationSection) {
+        navigationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-8">
         <Button
           variant="ghost"
-          onClick={() => navigate("/")}
+          onClick={handleBackToHome}
           className="mb-8 hover:bg-accent/10"
         >
           <ArrowLeftIcon className="w-5 h-5 mr-2" />

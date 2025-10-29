@@ -12,12 +12,22 @@ import {
 const PettyPage = () => {
   const navigate = useNavigate();
 
+  const handleBackToHome = () => {
+    navigate("/");
+    setTimeout(() => {
+      const navigationSection = document.getElementById('navigation-section');
+      if (navigationSection) {
+        navigationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="container mx-auto max-w-5xl">
         <Button
           variant="ghost"
-          onClick={() => navigate('/')}
+          onClick={handleBackToHome}
           className="mb-8 hover:bg-gold/10"
         >
           <ArrowLeftIcon className="w-4 h-4 mr-2" />
