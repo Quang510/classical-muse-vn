@@ -23,7 +23,8 @@ export const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      // Only show navbar after scrolling past hero (800px)
+      setIsScrolled(window.scrollY > 800);
 
       const sectionElements = sections.map(s => ({
         id: s.id,
@@ -62,15 +63,12 @@ export const Navigation = () => {
     }
   };
 
+  // Only render navbar after scroll
+  if (!isScrolled) return null;
+
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "glass-effect shadow-[var(--shadow-medium)] border-b border-gold/20"
-            : "bg-transparent"
-        }`}
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-effect shadow-[var(--shadow-medium)] border-b border-gold/20 animate-in slide-in-from-top duration-500">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             <button

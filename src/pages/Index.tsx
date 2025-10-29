@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { HeroNavigation } from "@/components/HeroNavigation";
 import { Section } from "@/components/Section";
 import { EconomistCard } from "@/components/EconomistCard";
 import { FeatureTile } from "@/components/FeatureTile";
@@ -54,8 +55,23 @@ const Index = () => {
     setTheoryDetailOpen(true);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 20;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen">
+      {/* Simplified floating navbar - only shows after scroll */}
       <Navigation />
 
       <EconomistDetail 
@@ -69,6 +85,9 @@ const Index = () => {
         onOpenChange={setTheoryDetailOpen}
         data={selectedTheory}
       />
+
+      {/* Hero Navigation - Bento Grid */}
+      <HeroNavigation onNavigate={scrollToSection} />
 
       {/* Hero Section */}
       <Section id="intro" emoji="🏛️" title="Giới thiệu chung">
