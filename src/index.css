@@ -8,48 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Ancient paper/parchment theme with earthy tones */
-    --background: 40 35% 94%;
-    --foreground: 25 20% 20%;
+    /* Modern earthy gold theme */
+    --background: 45 55% 96%;
+    --foreground: 30 25% 15%;
 
-    --card: 38 40% 96%;
-    --card-foreground: 25 20% 20%;
+    --card: 45 50% 98%;
+    --card-foreground: 30 25% 15%;
 
-    --popover: 38 40% 96%;
-    --popover-foreground: 25 20% 20%;
+    --popover: 45 50% 98%;
+    --popover-foreground: 30 25% 15%;
 
-    --primary: 25 35% 25%;
-    --primary-foreground: 40 35% 94%;
+    --primary: 35 65% 45%;
+    --primary-foreground: 45 55% 98%;
 
-    --secondary: 38 25% 85%;
-    --secondary-foreground: 25 20% 20%;
+    --secondary: 42 35% 88%;
+    --secondary-foreground: 30 25% 15%;
 
-    --muted: 40 20% 88%;
-    --muted-foreground: 30 15% 45%;
+    --muted: 42 25% 90%;
+    --muted-foreground: 35 15% 40%;
 
-    --accent: 30 45% 50%;
-    --accent-foreground: 40 35% 94%;
+    --accent: 25 75% 55%;
+    --accent-foreground: 45 55% 98%;
 
-    --bronze: 25 40% 45%;
-    --bronze-foreground: 40 35% 94%;
+    --bronze: 35 60% 50%;
+    --bronze-foreground: 45 55% 98%;
 
-    --antiqued: 35 30% 65%;
-    --antiqued-foreground: 25 20% 20%;
+    --gold: 45 90% 55%;
+    --gold-foreground: 30 25% 15%;
 
     --destructive: 0 65% 55%;
-    --destructive-foreground: 40 35% 94%;
+    --destructive-foreground: 45 55% 98%;
 
-    --border: 35 20% 80%;
-    --input: 35 20% 80%;
-    --ring: 30 45% 50%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 35 65% 45%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     
-    /* Ancient book texture */
-    --shadow-paper: 0 2px 8px rgba(139, 115, 85, 0.15);
-    --shadow-elevated: 0 8px 24px rgba(139, 115, 85, 0.25);
+    /* Modern shadows */
+    --shadow-soft: 0 2px 12px rgba(180, 135, 70, 0.08);
+    --shadow-medium: 0 4px 20px rgba(180, 135, 70, 0.12);
+    --shadow-large: 0 8px 32px rgba(180, 135, 70, 0.16);
   }
 }
 
@@ -77,13 +78,13 @@ All colors MUST be HSL.
 
 @layer utilities {
   .fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.8s ease-out;
   }
 
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
     }
     to {
       opacity: 1;
@@ -96,7 +97,13 @@ All colors MUST be HSL.
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px -10px hsl(var(--accent) / 0.3);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-large);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 }

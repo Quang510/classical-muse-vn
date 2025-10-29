@@ -43,9 +43,9 @@ export default {
           DEFAULT: "hsl(var(--bronze))",
           foreground: "hsl(var(--bronze-foreground))",
         },
-        antiqued: {
-          DEFAULT: "hsl(var(--antiqued))",
-          foreground: "hsl(var(--antiqued-foreground))",
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

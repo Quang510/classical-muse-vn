@@ -26,7 +26,7 @@ export const EconomistCard = ({
   onViewDetail,
 }: EconomistCardProps) => {
   return (
-    <Card className={`hover-lift overflow-hidden border-bronze/30 bg-card shadow-[var(--shadow-paper)] hover:shadow-[var(--shadow-elevated)] transition-all duration-300 ${className}`}>
+    <Card className={`hover-lift overflow-hidden border-gold/30 bg-card shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-large)] transition-all duration-500 ${className}`}>
       <div className="aspect-[4/3] overflow-hidden bg-muted relative">
         <img
           src={imageSrc}
@@ -63,7 +63,7 @@ export const EconomistCard = ({
           <Button
             onClick={onViewDetail}
             variant="outline"
-            className="w-full mt-2 border-bronze/40 hover:bg-bronze hover:text-bronze-foreground transition-all group"
+            className="w-full mt-2 border-gold/50 hover:bg-gradient-to-r hover:from-bronze hover:to-gold hover:text-white hover:border-transparent transition-all duration-300 group"
           >
             Xem chi tiết
             <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
