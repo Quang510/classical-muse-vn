@@ -41,7 +41,7 @@ const TheoriesPage = () => {
       description: "Nền tảng của thương mại quốc tế"
     },
     {
-      id: "division-of-labor",
+      id: "division-labor",
       category: "Năng suất",
       title: "Phân công lao động",
       description: "Chuyên môn hóa tăng năng suất"
@@ -53,10 +53,10 @@ const TheoriesPage = () => {
       description: "Tự do kinh tế không can thiệp"
     },
     {
-      id: "says-law",
-      category: "Kinh tế vĩ mô",
-      title: "Định luật Say",
-      description: "Cung tạo ra cầu của chính nó"
+      id: "rent-theory",
+      category: "Phân phối",
+      title: "Lý thuyết địa tô",
+      description: "Thu nhập từ đất đai và tài nguyên"
     }
   ];
 
