@@ -91,11 +91,11 @@ export const EconomistDetail = ({ open, onOpenChange, data }: EconomistDetailPro
                   <div key={index} className="bg-secondary/50 rounded-lg p-4 border border-bronze/20">
                     <h4 className="font-medium text-primary mb-1">
                       {work.vietnameseName && (
-                        <span className="text-foreground block mb-1">
-                          {work.vietnameseName}
+                        <span className="text-bronze italic block mb-1">
+                          {work.vietnameseName} <span className="font-normal">({work.year})</span>
                         </span>
                       )}
-                      <em className="text-sm text-bronze">{work.title}</em> <span className="text-sm text-bronze">({work.year})</span>
+                      <em className="text-xs text-foreground/90">{work.title}</em>
                     </h4>
                     <p className="text-sm text-foreground/80">{work.description}</p>
                   </div>
