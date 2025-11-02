@@ -23,6 +23,7 @@ export interface EconomistDetailData {
   biography: string;
   majorWorks: Array<{
     title: string;
+    vietnameseName?: string;
     year: string;
     description: string;
   }>;
@@ -89,7 +90,12 @@ export const EconomistDetail = ({ open, onOpenChange, data }: EconomistDetailPro
                 {data.majorWorks.map((work, index) => (
                   <div key={index} className="bg-secondary/50 rounded-lg p-4 border border-bronze/20">
                     <h4 className="font-medium text-primary mb-1">
-                      <em>{work.title}</em> ({work.year})
+                      {work.vietnameseName && (
+                        <span className="text-foreground block mb-1">
+                          {work.vietnameseName}
+                        </span>
+                      )}
+                      <em className="text-sm text-muted-foreground">{work.title}</em> ({work.year})
                     </h4>
                     <p className="text-sm text-foreground/80">{work.description}</p>
                   </div>

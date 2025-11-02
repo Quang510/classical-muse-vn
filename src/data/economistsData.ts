@@ -14,12 +14,14 @@ export const economistsData: Record<string, EconomistDetailData> = {
     majorWorks: [
       {
         title: "The Theory of Moral Sentiments",
+        vietnameseName: "Lý thuyết Tình cảm Đạo đức",
         year: "1759",
         description:
           "Khám phá bản chất của đạo đức con người, sự đồng cảm và các nguyên tắc đạo đức điều chỉnh hành vi xã hội. Đây là nền tảng triết học cho các tác phẩm kinh tế sau này của ông.",
       },
       {
         title: "An Inquiry into the Nature and Causes of the Wealth of Nations",
+        vietnameseName: "Khảo cứu về Bản chất và Nguyên nhân của Sự giàu có của các Quốc gia",
         year: "1776",
         description:
           "Tác phẩm kinh điển đánh dấu sự ra đời của kinh tế học hiện đại. Phân tích phân công lao động, thị trường tự do, vai trò của lợi ích cá nhân, và khái niệm 'bàn tay vô hình' điều tiết nền kinh tế.",
@@ -56,12 +58,14 @@ export const economistsData: Record<string, EconomistDetailData> = {
     majorWorks: [
       {
         title: "On the Principles of Political Economy and Taxation",
+        vietnameseName: "Về các Nguyên lý Kinh tế Chính trị và Thuế khóa",
         year: "1817",
         description:
           "Tác phẩm chính của Ricardo, trình bày một cách hệ thống lý thuyết giá trị lao động, phân phối thu nhập giữa địa chủ, tư bản và công nhân, cũng như lý thuyết về địa tô (rent) và thương mại quốc tế.",
       },
       {
         title: "Essay on the Influence of a Low Price of Corn on the Profits of Stock",
+        vietnameseName: "Tiểu luận về Ảnh hưởng của Giá Ngũ cốc Thấp đến Lợi nhuận Vốn",
         year: "1815",
         description:
           "Phân tích mối quan hệ giữa giá lương thực, địa tô và lợi nhuận tư bản, đặt nền móng cho lý thuyết phân phối thu nhập.",
@@ -98,30 +102,35 @@ export const economistsData: Record<string, EconomistDetailData> = {
     majorWorks: [
       {
         title: "A System of Logic",
+        vietnameseName: "Hệ thống Logic",
         year: "1843",
         description:
           "Công trình về logic học và phương pháp khoa học, đặt nền móng cho chủ nghĩa kinh nghiệm và phương pháp quy nạp trong khoa học xã hội.",
       },
       {
         title: "Principles of Political Economy",
+        vietnameseName: "Các Nguyên lý Kinh tế Chính trị",
         year: "1848",
         description:
           "Tổng kết và mở rộng kinh tế học cổ điển. Mill phân biệt rõ giữa quy luật sản xuất (bất biến) và quy luật phân phối (có thể thay đổi), mở ra khả năng cải cách xã hội.",
       },
       {
         title: "On Liberty",
+        vietnameseName: "Về Tự do",
         year: "1859",
         description:
           "Tác phẩm kinh điển về tự do cá nhân, bảo vệ quyền tự do ngôn luận và hành động miễn là không gây hại cho người khác.",
       },
       {
         title: "Utilitarianism",
+        vietnameseName: "Chủ nghĩa Công lợi",
         year: "1861",
         description:
           "Phát triển chủ nghĩa công lợi (utilitarianism), nhấn mạnh chất lượng hạnh phúc chứ không chỉ số lượng.",
       },
       {
         title: "The Subjection of Women",
+        vietnameseName: "Sự Đàn áp Phụ nữ",
         year: "1869",
         description:
           "Ủng hộ mạnh mẽ quyền bình đẳng của phụ nữ, được coi là một trong những tác phẩm nữ quyền sớm nhất.",
