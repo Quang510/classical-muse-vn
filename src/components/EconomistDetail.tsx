@@ -95,7 +95,7 @@ export const EconomistDetail = ({ open, onOpenChange, data }: EconomistDetailPro
                           {work.vietnameseName}
                         </span>
                       )}
-                      <em className="text-xs text-foreground/70">{work.title}</em> ({work.year})
+                      <em className="text-sm text-bronze">{work.title}</em> <span className="text-sm text-foreground/70">({work.year})</span>
                     </h4>
                     <p className="text-sm text-foreground/80">{work.description}</p>
                   </div>
